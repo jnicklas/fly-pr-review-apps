@@ -27,3 +27,5 @@ inputs:
     default: true
   secrets:
     description: Secrets to be set on the app. Separate multiple secrets with a space.
+  env:
+    description: Environment variables to be set on the app. Separate multiple variables with a space.

@@ -49,7 +49,7 @@ if [ -n "$INPUT_POSTGRES" ]; then
 fi
 
 if [ "$INPUT_UPDATE" != "false" ]; then
-  flyctl deploy --config "$config" --app "$app" --region "$region" --strategy immediate --image "$image"
+  flyctl deploy --config "$config" --env "$INPUT_ENV" --app "$app" --region "$region" --strategy immediate --image "$image"
 fi
 
 # Make some info available to the GitHub workflow.
