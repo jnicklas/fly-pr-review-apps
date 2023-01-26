@@ -39,7 +39,7 @@ fi
 if ! flyctl status --app "$app"; then
   flyctl apps create --name "$app" --org "$org"
   if [ -n "$INPUT_SECRETS" ]; then
-    echo $INPUT_SECRETS | tr " " "\n" | flyctl secrets import --app "$app"
+    flyctl secrets set --app "$app" "$INPUT_SECRETS"
   fi
 fi
 
